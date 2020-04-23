@@ -54,6 +54,10 @@
 }
 
 @media ( max-width: 991px ) {
+	hr {
+		border: solid 2px black;
+	}
+	
 	.loginBox {
 		width:80%; 
 	}
@@ -67,6 +71,8 @@
 		width: 95%;
 		margin-top: 0;
 		margin-bottom: 0;
+		font-size: 30px;
+		border: solid 2px black;
 	}
 	
 	.login .userId {
