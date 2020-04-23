@@ -25,7 +25,7 @@ public class PageServiceImpl implements PageService {
 		param.setContentType(mf.getContentType());
 		param.setOriginNm(mf.getOriginalFilename());
 		param.setNewNm(RandomStringUtils.randomAlphanumeric(20) + "_" + mf.getOriginalFilename());
-		param.setImgPath("/img/");
+		param.setImgPath(Common.PATH + "img/");
 		param.setSize(mf.getSize());
 		
 		pageMapper.addImg(param);
