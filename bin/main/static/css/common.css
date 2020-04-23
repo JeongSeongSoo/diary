@@ -82,6 +82,10 @@ hr {
 		margin-bottom: 15px;
 		font-size: 18px;
 	}
+	
+	hr {
+		border: solid 2px black;
+	}
 }
 
 @media ( max-width: 767px ) {
