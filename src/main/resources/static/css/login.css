@@ -54,6 +54,10 @@
 }
 
 @media ( max-width: 991px ) {
+	.loginBox {
+		width:80%; 
+	}
+
 	.login .span {
 		display: none;
 	}
@@ -62,6 +66,16 @@
 		height: 50px;
 		width: 95%;
 		margin-top: 0;
+		margin-bottom: 0;
+	}
+	
+	.login .userId {
+		margin-bottom: 30px;
+	}
+	
+	.loginSubmit {
+		margin-top: 35px;
+		margin-bottom: 15px;
 	}
 }
 
