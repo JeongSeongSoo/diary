@@ -86,6 +86,11 @@ hr {
 	hr {
 		border: solid 2px black;
 	}
+	
+	input {
+		font-size: 25px;
+		border: solid 2px black;
+	}
 }
 
 @media ( max-width: 767px ) {

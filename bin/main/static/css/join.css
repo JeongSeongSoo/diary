@@ -73,13 +73,13 @@
 	.login .span {
 		font-size: 14px;
 	}
+	
+	.login .input input {
+		margin-top: 20px;
+	}
 }
 
 @media ( max-width: 991px ) {
-	.login {
-		text-align: center;
-	}
-
 	.login .span {
 		display: none;
 	}
