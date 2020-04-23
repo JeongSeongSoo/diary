@@ -70,12 +70,29 @@
 }
 
 @media ( max-width: 1199px ) {
-	.login .span {
-		font-size: 14px;
+	.loginBox {
+		width: 80%; 
+	}
+
+	.login .input .txt_msg {
+		font-size: 16px;
+	}
+	
+	.login .input span {
+		font-size: 20px;
 	}
 	
 	.login .input input {
+		width: 100%;
 		margin-top: 20px;
+	}
+	
+	.loginSubmit {
+		margin-top: 35px;
+		margin-bottom: 35px;
+		width: 250px;
+		height: 100px;
+		font-size: 40px;
 	}
 }
 
