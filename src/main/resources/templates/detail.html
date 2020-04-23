@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorator="layout/default">
+
+    <!-- index.html 고유 CSS 추가 -->
+    <th:block layout:fragment="css">
+        <link rel="stylesheet" th:href="@{/static/css/detail.css}" />
+    </th:block>
+    
+    <!-- index.html 고유 스크립트 추가 -->
+    <th:block layout:fragment="script">
+        <script th:src="@{/static/js/detail.js}"></script>
+    </th:block>
+    
+    <div layout:fragment="content">
+	    <div class="container">
+	    	<div class="row">
+	    		<div class="col-*-*">
+					<h2>내용</h2>
+					<h5>HOME > 내용</h5>
+				</div>    	
+	    	</div>
+	    	<div class="row detailBox">
+	    		<div class="col-*-* header">
+	    			<span class="step">STEP.</span><span> Detail</span>
+	    		</div>
+	    		<hr/>
+		   		<form action="/page/add" method="post" class="pageAddForm" id="pageAddForm">
+		   			<input type="hidden" class="pageId" id="pageId" name="imgId" th:value="${page.pageId}">
+		   			<input type="hidden" class="imgId" id="imgId" name="imgId" th:value="${page.imgId}">
+		   			<input type="hidden" class="category" id="category" name="category" th:value="${page.category}">
+		   			<div>
+			   			<div class="title" th:utext="${page.title}"></div>
+		   			</div>
+		   			<hr class="dashed"/>
+		   			<div class="content" th:utext="${page.content}"></div>
+		   			<hr/>
+					<div class="col-*-* detailBtn">
+		    			<input class="pageSubmit" id="updateBtn" type="button" value="수정"/>
+		    			<input class="pageSubmit" id="deleteBtn" type="button" value="삭제"/>
+		    		</div>
+		   		</form>
+	   		</div>
+	   	</div>
+    </div>
+</html>

@@ -1,0 +1,101 @@
+.dailyBox {
+	width:90%; 
+	margin:0 auto;	
+}
+
+.dailyBox .step {
+	color: #ff5151;
+}
+
+.dailyBox .page {
+	text-align: center;
+	margin-bottom: 35px;
+	height: 200px;
+}
+
+.dailyBox .header {
+	text-align: center; 
+	font-size: 30px;
+}
+
+.dailyBox img {
+	width: 100%;
+	height: 100%;
+	margin-bottom: 10px;
+}
+
+.dailyBox .content a {
+	color: black;
+	font-size: 15px;
+	font-weight: bold;
+}
+
+.dailyBox .write {
+	text-align: right;
+}
+
+.dailyBox .write a {
+	font-size: 17px;
+	padding-left: 15px;
+	padding-right: 15px;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	background-color: #ff5151;
+	color: white;
+	border-width: 0;
+	border-radius: 5px;
+	font-weight: bold;
+	margin-left: 5px;
+	margin-right: 5px;
+}
+
+.dailyBox .pagination {
+	text-align: center; 
+	width: 100%;
+}
+
+.dailyBox .pagination a {
+	font-size: 17px;
+	padding-left: 25px;
+	padding-right: 25px;
+	padding-top: 20px;
+	padding-bottom: 20px;
+	background-color: #ff5151;
+	color: white;
+	border-width: 0;
+	border-radius: 5px;
+	font-weight: bold;
+	margin-left: 5px;
+	margin-right: 5px;
+}
+
+@media ( max-width: 1199px ) {
+	.dailyBox .content a {
+		font-size: 12px;
+	}
+}
+
+@media ( max-width: 991px ) {
+	.dailyBox img {
+		padding-top: 30px;
+		padding-bottom: 30px;
+	}
+}
+
+@media ( max-width: 767px ) {
+	.dailyBox img {
+		padding-left: 120px;
+		padding-right: 120px;
+		padding-top: 0;
+		padding-bottom: 0;
+		margin-bottom: 10px;
+	}
+	
+	.dailyBox .content a {
+		font-size: 15px;
+	}
+	
+	.page {
+		margin-top: 20px;
+	}
+}

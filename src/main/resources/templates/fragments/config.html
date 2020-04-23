@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
+    <th:block th:fragment="configFragment">
+	    <link rel="shortcut icon" href="/static/img/dog.png"> 
+		<link rel="icon" href="/static/img/dog.png">
+    
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" />
+        <link rel="stylesheet" th:href="@{/static/css/common.css}" />
+        
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+        <script th:src="@{/static/js/common.js}"></script> 
+        
+        <th:block layout:fragment="css"></th:block>
+        <th:block layout:fragment="script"></th:block>
+    </th:block>
+</html>

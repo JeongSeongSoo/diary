@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration>
+    <!-- Created By yeoseong_yoon -->
+    <!-- 로그 경로 변수 선언 -->
+    
+    <!-- Console Appender -->
+    <appender name="console" class="ch.qos.logback.core.ConsoleAppender">
+        <encoder class="ch.qos.logback.classic.encoder.PatternLayoutEncoder">
+            <pattern>
+				▶ %-5level %d{HH:mm:ss.SSS} [%thread] %logger[%method:%line] - %replace(%msg){'([^0-9])(01[0|1|6|7|8|9])(\d{3,4})(\d{4})','$1$2-****-$4'}%n
+            </pattern>
+            <!-- <pattern>%-5level %d{HH:mm:ss.SSS} [%thread %F:%L] %method - %msg%n</pattern> -->
+        </encoder>
+    </appender>
+    
+    <appender name="filea" class="ch.qos.logback.core.rolling.RollingFileAppender">
+        <file>D://ddongs.log</file>
+        <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+            <!-- <fileNamePattern>D://ddongs.%d{yyyy-MM-dd}.log</fileNamePattern> -->
+            <fileNamePattern>log//ddongs.%d{yyyy-MM-dd}.log</fileNamePattern>
+        </rollingPolicy>
+        <encoder>
+            <pattern>
+				▷ %-5level %d{HH:mm:ss} %logger[%method:%line] - %replace(%msg){'([^0-9])(01[0|1|6|7|8|9])(\d{3,4})(\d{4})','$1$2-****-$4'}%n
+            </pattern>
+        </encoder>
+    </appender>
+ 
+    <!-- <logger name="com.ddongs" level="INFO"/> -->
+    <logger name="org.diary" level="debug"/>
+ 
+    <root level="debug"> <!-- INFO -->
+        <!-- <appender-ref ref="filea"/>   -->
+        <appender-ref ref="console"/>
+    </root>
+</configuration>

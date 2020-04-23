@@ -1,0 +1,39 @@
+plugins {
+	id 'org.springframework.boot' version '2.2.6.RELEASE'
+	id 'io.spring.dependency-management' version '1.0.9.RELEASE'
+	id 'java'
+}
+
+group = 'org.diary'
+version = '0.0.1-SNAPSHOT'
+sourceCompatibility = '1.8'
+
+configurations {
+	compileOnly {
+		extendsFrom annotationProcessor
+	}
+}
+
+repositories {
+	mavenCentral()
+}
+
+dependencies {
+	implementation 'org.springframework.boot:spring-boot-starter-security'
+	implementation 'org.springframework.boot:spring-boot-starter-thymeleaf'
+	implementation 'org.thymeleaf.extras:thymeleaf-extras-springsecurity5'
+	implementation 'org.springframework.boot:spring-boot-starter-web'
+	compileOnly 'org.projectlombok:lombok'
+	annotationProcessor 'org.projectlombok:lombok'
+	compile 'org.springframework.boot:spring-boot-starter-jdbc'
+	compile 'org.mariadb.jdbc:mariadb-java-client'
+	compile 'org.mybatis.spring.boot:mybatis-spring-boot-starter:2.1.1'
+	compile 'nz.net.ultraq.thymeleaf:thymeleaf-layout-dialect'
+	compile 'io.github.jpenren:thymeleaf-spring-data-dialect:3.3.1'
+	//compile 'com.fasterxml.jackson.core:jackson-core:2.10.3'
+	//compile 'com.fasterxml.jackson.core:jackson-annotations:2.8.8'
+	//compile 'com.fasterxml.jackson.core:jackson-databind:2.10.3'
+	compile 'org.codehaus.jackson:jackson-mapper-asl:1.9.13'
+	compile 'commons-io:commons-io:1.4'
+	compile 'org.apache.commons:commons-lang3:3.0'
+}

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="org.diary.web.user.mapper.UserMapper">
+	<select id="loadUserByUserId" resultType="org.diary.web.user.model.UserVO"> 
+		SELECT USER_ID,
+			   USER_PW,
+			   USER_NM,
+			   EMAIL
+		  FROM TBL_USER	  
+		 WHERE USER_ID = #{userId}  
+	</select>
+	<select id="loadUserByEmail" resultType="org.diary.web.user.model.UserVO"> 
+		SELECT USER_ID,
+			   USER_PW,
+			   USER_NM,
+			   EMAIL
+		  FROM TBL_USER	  
+		 WHERE EMAIL = #{email}  
+	</select>
+	<insert id="addUser">
+		INSERT INTO TBL_USER 
+		VALUES 
+		(
+			#{userId}, 
+			#{userPw}, 
+			#{userNm}, 
+			#{email}
+		)
+	</insert>
+</mapper>
+

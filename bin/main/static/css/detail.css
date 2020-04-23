@@ -1,0 +1,52 @@
+.detailBox {
+	width:80%; 
+	margin:0 auto;	
+}
+
+.detailBox .header {
+	text-align: center; 
+	font-size: 30px;
+}
+
+.detailBox .step {
+	color: #ff5151;
+}
+
+.detailBox .detailBtn {
+	text-align: center;
+}
+
+.detailBox .detailBtn input {
+	width: 150px;
+	height: 50px;
+	background-color: #ff5151;
+	color: white;
+	border-width: 0;
+	border-radius: 5px;
+	font-size: 20px;
+	font-weight: bold;
+	margin-left: 5px;
+	margin-right: 5px;
+}
+
+.detailBox .title {
+	font-size: 20px;
+}
+
+.detailBox .dashed {
+	margin-top: 10px;
+	margin-bottom: 40px;
+	border: 0.5px dashed black;
+}
+
+@media ( max-width: 1199px ) {
+
+}
+
+@media ( max-width: 991px ) {
+
+}
+
+@media ( max-width: 767px ) {
+
+}

@@ -1,0 +1,60 @@
+.writeBox {
+	width:80%; 
+	margin:0 auto;	
+}
+
+.writeBox .label {
+	font-size: 17px;
+	color: black;
+	padding: 0;
+}
+
+.writeBox .header {
+	text-align: center; 
+	font-size: 30px;
+}
+
+.writeBox .step {
+	color: #ff5151;
+}
+
+.writeBox .title {
+	width: 100%;
+	height: 35px;
+	margin-top: 10px;
+	margin-bottom: 20px;
+}
+
+.writeBox .content {
+	margin-top: 20px;
+	margin-bottom: 10px;
+}
+
+.writeBox .writeBtn {
+	text-align: center;
+}
+
+.writeBox .writeBtn input {
+	width: 150px;
+	height: 50px;
+	background-color: #ff5151;
+	color: white;
+	border-width: 0;
+	border-radius: 5px;
+	font-size: 20px;
+	font-weight: bold;
+	margin-left: 5px;
+	margin-right: 5px;
+}
+
+@media ( max-width: 1199px ) {
+
+}
+
+@media ( max-width: 991px ) {
+
+}
+
+@media ( max-width: 767px ) {
+
+}

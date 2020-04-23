@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
+<head>
+    <meta charset="UTF-8" />
+    <title>DDONG'S</title>
+    <th:block th:replace="fragments/config :: configFragment" ></th:block>
+</head>
+<body>
+
+    <th:block th:replace="fragments/header :: headerFragment"></th:block>
+    <hr/>
+    <th:block layout:fragment="content"></th:block>
+    <hr/>
+    <th:block th:replace="fragments/footer :: footerFragment"> </th:block>
+
+</body>
+</html>

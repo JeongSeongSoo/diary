@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorator="layout/default">
+
+    <!-- index.html 고유 CSS 추가 -->
+    <th:block layout:fragment="css">
+        <link rel="stylesheet" th:href="@{/static/css/update.css}" />
+        <link href="https://cdn.jsdelivr.net/npm/summernote@0.8.16/dist/summernote.min.css" rel="stylesheet">
+    </th:block>
+    
+    <!-- index.html 고유 스크립트 추가 -->
+    <th:block layout:fragment="script">
+        <script th:src="@{/static/js/update.js}"></script>
+  		<script src="https://cdn.jsdelivr.net/npm/summernote@0.8.16/dist/summernote.min.js"></script>
+    </th:block>
+    
+    <div layout:fragment="content">
+	    <div class="container">
+	    	<div class="row">
+	    		<div class="col-*-*">
+					<h2>수정</h2>
+					<h5>HOME > 수정</h5>
+				</div>    	
+	    	</div>
+	    	<div class="row writeBox">
+	    		<div class="col-*-* header">
+	    			<span class="step">STEP.</span><span> 내용 입력</span>
+	    		</div>
+	    		<hr/>
+		   		<form action="/page/modify" method="post" class="pageUpdateForm" id="pageUpdateForm">
+		   			<input type="hidden" class="pageId" id="pageId" name="pageId" th:value="${page.pageId}">
+		   			<input type="hidden" class="imgId" id="imgId" name="imgId" value="0">
+		   			<input type="hidden" class="category" id="category" name="category" th:value="${page.category}">
+		   			<div>
+			   			<span class="label">제목</span>
+			   			<input type="text" class="title" id="title" name="title" th:value="${page.title}">
+		   			</div>
+		   			<div class="content">
+			   			<span class="label">내용</span>
+		   			</div>
+		   			<textarea id="summernote" name="content" th:utext="${page.content}"></textarea>
+					<div class="col-*-* writeBtn">
+		    			<input class="writeSubmit" id="pageSubmit" type="button" value="저장"/>
+		    			<input class="cancelBtn" id="cancelBtn" type="button" value="취소"/>
+		    		</div>
+		   		</form>
+	   		</div>
+			
+	   	</div>
+    </div>
+</html>
