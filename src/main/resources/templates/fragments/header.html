@@ -32,9 +32,16 @@
 		</div>
 	</div>
 	<div class="row app">
-		<div class="col-*-* menuBtn">
-			<img src="/static/img/button.png"></img>
-	        <div class="navigation-list" id="navigation-list">
+		<div class="row">
+			<div class="col-lg-2 col-md-2 col-sm-2 col-xs-2">
+				<a href="/page/daily"><img src="/static/img/dog.png" style="height: 70px;"></img></a>
+			</div>
+			<div class="col-lg-10 col-md-10 col-sm-10 col-xs-10 menuBtn">
+				<img src="/static/img/button.png"></img>
+			</div>
+		</div>
+		<div class="row">
+			<div class="navigation-list" id="navigation-list">
 				<ul>
 					<li sec:authorize="isAuthenticated()"><a href="#">Daily</a></li>
 					<li sec:authorize="isAuthenticated()"><a href="#">Food</a></li>
