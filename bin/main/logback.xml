@@ -14,7 +14,7 @@
     </appender>
     
     <appender name="filea" class="ch.qos.logback.core.rolling.RollingFileAppender">
-        <file>D://ddongs.log</file>
+        <file>log/diary.log</file>
         <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
             <!-- <fileNamePattern>D://ddongs.%d{yyyy-MM-dd}.log</fileNamePattern> -->
             <fileNamePattern>log//ddongs.%d{yyyy-MM-dd}.log</fileNamePattern>
@@ -26,7 +26,6 @@
         </encoder>
     </appender>
  
-    <!-- <logger name="com.ddongs" level="INFO"/> -->
     <logger name="org.diary" level="debug"/>
  
     <root level="debug"> <!-- INFO -->
