@@ -3,6 +3,10 @@ header {
 	font-weight: bold;
 }
 
+footer {
+	margin-bottom: 20px;
+}
+
 .web {
 	display: table;
 	width: 100%;

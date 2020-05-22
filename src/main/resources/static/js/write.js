@@ -1,5 +1,16 @@
 $(document).ready(function() {
 	$('#summernote').summernote({
+		toolbar: [
+			['style', ['style']],
+		    ['font', ['bold', 'italic', 'underline', 'clear']],
+		    ['fontname', ['fontname']],
+		    ['color', ['color']],
+		    ['para', ['ul', 'ol', 'paragraph']],
+		    ['height', ['height']],
+		    ['table', ['table']],
+		    ['insert', ['picture', 'hr']],
+		    ['help', ['help']]
+		],
 		height: 500,
 		minHeight: null,
 		maxHeight: null,

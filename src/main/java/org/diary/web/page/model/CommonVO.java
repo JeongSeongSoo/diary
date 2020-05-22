@@ -26,12 +26,12 @@ public class CommonVO {
 	}
 	
 	public int getStart() {
-		this.start = (pageNum - 1) * Common.CNT;
+		this.start = (pageNum - 1) * Common.VIEW_CNT;
 		return this.start;
 	}
 	
 	public int getEnd() {
-		this.end = Common.CNT;
+		this.end = Common.VIEW_CNT;
 		return this.end;
 	}
 	

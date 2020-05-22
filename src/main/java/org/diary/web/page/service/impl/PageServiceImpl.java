@@ -25,7 +25,7 @@ public class PageServiceImpl implements PageService {
 		param.setContentType(mf.getContentType());
 		param.setOriginNm(mf.getOriginalFilename());
 		param.setNewNm(RandomStringUtils.randomAlphanumeric(20) + "_" + mf.getOriginalFilename());
-		param.setImgPath(Common.PATH + "img/");
+		param.setImgPath(Common.IMG_PATH);
 		param.setSize(mf.getSize());
 		
 		pageMapper.addImg(param);
@@ -71,7 +71,7 @@ public class PageServiceImpl implements PageService {
 	@Override
 	public int loadPageAll(PageVO param) {
 		int total = pageMapper.loadPageAll(param); 
-		total = (int) Math.ceil((double)total / Common.CNT);
+		total = (int) Math.ceil((double)total / Common.VIEW_CNT);
 		return total;
 	}
 
