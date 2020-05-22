@@ -7,6 +7,7 @@ import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.annotation.web.builders.WebSecurity;
 import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
 import org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter;
+import org.springframework.security.web.authentication.AuthenticationSuccessHandler;
 import org.springframework.security.web.util.matcher.AntPathRequestMatcher;
 
 @Configuration
@@ -15,6 +16,9 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
 	
 	@Autowired
 	public WebAuthenticationProvider webAuthenticationProvider;
+	
+	@Autowired
+	public AuthenticationSuccessHandler authenticationSuccessHandler;
 	
 	@Override
 	public void configure(WebSecurity web) throws Exception {
@@ -32,7 +36,7 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
 			.formLogin()
 				.loginPage("/login/login")
 				.loginProcessingUrl("/login/check")
-				.defaultSuccessUrl("/page/daily")
+				.successHandler(authenticationSuccessHandler)
 			.and()
 			.logout()
 				.logoutRequestMatcher(new AntPathRequestMatcher("/login/logout"))

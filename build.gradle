@@ -2,7 +2,10 @@ plugins {
 	id 'org.springframework.boot' version '2.2.6.RELEASE'
 	id 'io.spring.dependency-management' version '1.0.9.RELEASE'
 	id 'java'
+	id 'war'
 }
+
+apply plugin: 'war'
 
 group = 'org.diary'
 version = '0.0.1-SNAPSHOT'
@@ -16,6 +19,12 @@ configurations {
 
 repositories {
 	mavenCentral()
+}
+
+bootWar {
+	archiveBaseName = 'diary'
+	archiveFileName = 'diary.war'
+	archiveVersion = '0.0.0'
 }
 
 dependencies {
@@ -36,4 +45,6 @@ dependencies {
 	compile 'org.codehaus.jackson:jackson-mapper-asl:1.9.13'
 	compile 'commons-io:commons-io:1.4'
 	compile 'org.apache.commons:commons-lang3:3.0'
+	
+	providedRuntime('org.springframework.boot:spring-boot-starter-tomcat')
 }
